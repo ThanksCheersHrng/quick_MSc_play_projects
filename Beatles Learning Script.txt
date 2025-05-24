@@ -1,0 +1,26 @@
+setwd("C:/Users/user/Documents/R_work")
+#this command needs quotes for directory name
+read.csv("beatles") 
+#this didn't work because the name was wrong
+getwd()
+#returned correct directory, 
+#containing the beatles file 
+#according to file explorer
+list.files("C:/Users/user/Documents/R_work")
+#this returned "beatles.csv" not "beatles" 
+read.csv("beatles.csv")
+#returned correct response (finally!)
+head("beatles.csv")
+#just returned file name again
+summary("beatles.csv")
+#Length : 1 ; Class : character ; Mode: Character
+#clearly this is just decribing the text, not the file. 
+beatles <- read.csv("beatles.csv")
+#define the csv as an object called ##beatles## no quotes
+summary("beatles")
+#returned text, not file 
+summary(beatles)
+#returned the correct (very thorough)
+#statistical summary 
+head(beatles)
+#gave first 6 rows of every column  
